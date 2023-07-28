@@ -1,4 +1,4 @@
-package com.lhj.designpatterns.factoryMethod.simplefactory;
+package com.lhj.designpatterns.factory.simpleFactory;
 
 import com.lhj.designpatterns.entity.Resource;
 import com.lhj.designpatterns.exception.ResourceLoadException;

@@ -1,4 +1,4 @@
-package com.lhj.designpatterns.factoryMethod.factory;
+package com.lhj.designpatterns.factory.factoryMethod;
 
 import com.lhj.designpatterns.entity.Resource;
 

@@ -1,7 +1,7 @@
 package com.lhj.designpatterns.factory;
 
 import com.lhj.designpatterns.entity.Resource;
-import com.lhj.designpatterns.factoryMethod.simplefactory.SFResourceLoader;
+import com.lhj.designpatterns.factory.simpleFactory.SFResourceLoader;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;

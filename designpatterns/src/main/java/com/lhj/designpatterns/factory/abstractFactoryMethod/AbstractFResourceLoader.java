@@ -1,7 +1,8 @@
-package com.lhj.designpatterns.factoryMethod.factory;
+package com.lhj.designpatterns.factory.abstractFactoryMethod;
 
-import com.lhj.designpatterns.entity.Resource;
 import com.lhj.designpatterns.exception.ResourceLoadException;
+import com.lhj.designpatterns.factory.abstractFactoryMethod.factory.IResourceLoader;
+import com.lhj.designpatterns.factory.abstractFactoryMethod.product.AbstractResource;
 import org.springframework.stereotype.Component;
 
 import java.io.InputStream;
@@ -18,9 +19,9 @@ import java.util.Properties;
  * @create 2019-10-27
  */
 @Component
-public class FResourceLoader {
+public class AbstractFResourceLoader {
 
-    private static Map<String, IResourceLoader> resourceLoaderMap = new HashMap<>();
+    private static final Map<String, IResourceLoader> RESOURCE_LOADER_MAP = new HashMap<>();
 
     //版本2
 //    static {
@@ -30,8 +31,9 @@ public class FResourceLoader {
 //    }
     //版本3
     static {
+
         InputStream resourceAsStream = Thread.currentThread().getContextClassLoader()
-                .getResourceAsStream("fresourceloader.properties");
+                .getResourceAsStream("abstractfresourceloader.properties");
         Properties properties = new Properties();
         try {
             properties.load(resourceAsStream);
@@ -40,14 +42,14 @@ public class FResourceLoader {
                 String className = properties.getProperty(key.toString());
                 Class<?> clazz = Class.forName(className);
                 IResourceLoader resourceLoader = (IResourceLoader) clazz.getConstructor().newInstance();
-                resourceLoaderMap.put(key.toString(), resourceLoader);
+                RESOURCE_LOADER_MAP.put(key.toString(), resourceLoader);
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public Resource load(String url) {
+    public AbstractResource load(String url) {
         String prefix = getPrefix(url);
         //版本1
 //        IResourceLoader resourceLoader;
@@ -64,7 +66,7 @@ public class FResourceLoader {
 //        return resourceLoader.load(url);
         //版本2
         try {
-            return resourceLoaderMap.get(prefix).load(url);
+            return RESOURCE_LOADER_MAP.get(prefix).load(url);
         } catch (Exception e) {
             throw new ResourceLoadException("不支持的资源类型");
         }

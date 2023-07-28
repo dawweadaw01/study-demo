@@ -17,7 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @Slf4j
 public class TestFactory {
     @Autowired
-    private com.lhj.designpatterns.factoryMethod.factory.FResourceLoader FResourceLoader;
+    private com.lhj.designpatterns.factory.factoryMethod.FResourceLoader FResourceLoader;
     @Test
     void testFactory1() {
         String url = "file://www.baidu.com";

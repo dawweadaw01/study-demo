@@ -1,4 +1,4 @@
-package com.lhj.designpatterns.factoryMethod.simplefactory;
+package com.lhj.designpatterns.factory.simpleFactory;
 
 import com.lhj.designpatterns.entity.Resource;
 import lombok.extern.slf4j.Slf4j;
@@ -31,3 +31,4 @@ public class ResourceFactory {
         }
     }
 }
+
