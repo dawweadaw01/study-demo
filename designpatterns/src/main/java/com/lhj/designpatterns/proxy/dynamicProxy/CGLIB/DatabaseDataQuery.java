@@ -1,5 +1,11 @@
 package com.lhj.designpatterns.proxy.dynamicProxy.CGLIB;
 
+import org.springframework.stereotype.Component;
+
+/**
+ * @author banyanmei
+ */
+@Component("cglibDatabaseDataQuery")
 public class DatabaseDataQuery {
 
     public String query(String queryKey) {

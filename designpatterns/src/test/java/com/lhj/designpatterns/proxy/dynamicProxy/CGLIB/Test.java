@@ -1,5 +1,6 @@
 package com.lhj.designpatterns.proxy.dynamicProxy.CGLIB;
 
+import jakarta.annotation.Resource;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cglib.proxy.Enhancer;
@@ -7,11 +8,14 @@ import org.springframework.cglib.proxy.Enhancer;
 @SpringBootTest
 @RunWith(org.springframework.test.context.junit4.SpringRunner.class)
 public class Test {
+    @Resource(name = "cglibDatabaseDataQuery")
+    private DatabaseDataQuery databaseDataQuery;
+
     @org.junit.Test
     public void test() {
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(DatabaseDataQuery.class);
-        enhancer.setCallback(new CacheMethodInterceptor(new DatabaseDataQuery()));
+        enhancer.setCallback(new CacheMethodInterceptor(databaseDataQuery));
         //cglib可以代理任何的类，不一定是接口
         DatabaseDataQuery databaseDataQuery = (DatabaseDataQuery) enhancer.create();
         String query = databaseDataQuery.query("key1");
