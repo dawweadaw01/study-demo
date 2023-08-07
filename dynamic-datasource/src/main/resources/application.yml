@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      master:
+        jdbc-url: jdbc:mysql://localhost:3306/cloud-oder?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+        username: root
+        password: 123456
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      slave:
+        jdbc-url: jdbc:mysql://localhost:3306/study_demo?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+        username: root
+        password: 123456
+        driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  check-config-location: true
+  type-aliases-package: com.lhj.dynamicdatasource.entity
+  configuration:
+    map-underscore-to-camel-case: true
