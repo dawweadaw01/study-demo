@@ -12,6 +12,10 @@ import java.sql.SQLException;
 import java.sql.SQLFeatureNotSupportedException;
 import java.util.logging.Logger;
 
+/**
+ * @author banyanmei
+ */
+
 @Component
 @Primary
 public class DynamicDataSource implements DataSource, InitializingBean {
