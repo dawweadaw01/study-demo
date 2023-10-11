@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class TestCacheProxy {
+public class TwoCacheProxy {
     @Test
     public void test() {
         CachingDataQueryProxy cachingDataQueryProxy = new CachingDataQueryProxy();

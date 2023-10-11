@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @Slf4j
-public class TestBuilder {
+public class TwoBuilder {
     @Test
     public void test() {
         HtmlDocument htmlDocument = new HtmlDocument.Builder()

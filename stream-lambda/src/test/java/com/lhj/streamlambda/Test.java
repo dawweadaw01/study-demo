@@ -1,12 +1,10 @@
 package com.lhj.streamlambda;
 
-import org.junit.runner.RunWith;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
 //@SpringBootTest
-@RunWith(org.springframework.test.context.junit4.SpringRunner.class)
+
 public class Test {
     @org.junit.Test
     public void testSortLambda() {
@@ -107,5 +105,51 @@ public class Test {
         List<String> a = list.stream().filter(s -> s.startsWith("a")).map(String::toUpperCase).
                 sorted(Comparator.naturalOrder()).toList();
         System.out.println(a);
+    }
+
+    @org.junit.Test
+    public void test231() {
+        int n, k;
+        Scanner sc = new Scanner(System.in);
+        int[] a = new int[100010];
+        n = sc.nextInt();
+        k = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            a[i] = sc.nextInt();
+        }
+        Deque<Integer> q = new ArrayDeque<>();
+        for (int i = 1; i <= n; i++) {
+            while (!q.isEmpty() && q.peekLast() > a[i]) {
+                q.pollLast();
+            }
+            q.addLast(a[i]);
+            while (i - k >= 1 && q.peekFirst() == a[i - k]) {
+                q.pollFirst();
+            }
+            if (i >= k) System.out.println(q.peekFirst() + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        int n, k;
+        Scanner sc = new Scanner(System.in);
+        int[] a = new int[100010];
+        n = sc.nextInt();
+        k = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            a[i] = sc.nextInt();
+        }
+        Deque<Integer> q = new ArrayDeque<>();
+        for (int i = 1; i <= n; i++) {
+            while (!q.isEmpty() && a[q.peekLast()] > a[i]) {
+                q.pollLast();
+            }
+            q.addLast(i);
+            while (i - k >= 1 && q.peekFirst() < i - k + 1) {
+                q.pollFirst();
+            }
+            if (i >= k) System.out.print(a[q.peekFirst()] + " ");
+        }
+        System.out.println();
     }
 }

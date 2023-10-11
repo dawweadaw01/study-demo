@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @RunWith(org.springframework.test.context.junit4.SpringRunner.class)
-public class TestSecurityProxy {
+public class TwoSecurityProxy {
     @Test
     public void test() {
         SecurityProxy securityProxy = new SecurityProxy(new SensitiveDataQueryImpl(), new UserAuthenticator());

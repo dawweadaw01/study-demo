@@ -15,7 +15,7 @@ import java.util.*;
 
 @SpringBootTest
 @Slf4j
-public class TestAbstractFactory {
+public class TwoAbstractFactory {
 
     @Autowired
     private AbstractFResourceLoader abstractFResourceLoader;

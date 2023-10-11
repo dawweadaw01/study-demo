@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @RunWith(org.springframework.test.context.junit4.SpringRunner.class)
-public class TestRemoterProxy {
+public class TwoRemoterProxy {
     @Test
     public void test() {
         RemoteServiceProxy remoteServiceProxy = new RemoteServiceProxy("https://example.com/remote-service", new RemoteServiceImpl());

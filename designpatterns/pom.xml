@@ -22,7 +22,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
-            <scope>test</scope>
+            <scope>two</scope>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>

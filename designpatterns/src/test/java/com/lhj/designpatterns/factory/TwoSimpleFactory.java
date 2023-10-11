@@ -1,6 +1,8 @@
 package com.lhj.designpatterns.factory;
 
 import com.lhj.designpatterns.entity.Resource;
+import com.lhj.designpatterns.factory.simpleFactory.SFResourceLoader;
+
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +17,12 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 @SpringBootTest
 @Slf4j
-public class TestFactory {
+public class TwoSimpleFactory {
     @Autowired
-    private com.lhj.designpatterns.factory.factoryMethod.FResourceLoader FResourceLoader;
+    private SFResourceLoader SFResourceLoader;
     @Test
-    void testFactory1() {
-        String url = "file://www.baidu.com";
-        Resource load = FResourceLoader.load(url);
+    void testSimpleFactory1() {
+        Resource load = SFResourceLoader.load("classpath://www.baidu.com");
         log.info(load.toString());
     }
 }

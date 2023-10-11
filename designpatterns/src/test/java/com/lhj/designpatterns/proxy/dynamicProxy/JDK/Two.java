@@ -8,7 +8,7 @@ import java.lang.reflect.Proxy;
 
 @SpringBootTest
 @RunWith(org.springframework.test.context.junit4.SpringRunner.class)
-public class Test {
+public class Two {
     @org.junit.Test
     public void test() {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();

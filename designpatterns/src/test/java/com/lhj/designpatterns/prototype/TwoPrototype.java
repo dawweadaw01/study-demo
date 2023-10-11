@@ -14,7 +14,7 @@ import java.util.List;
 
 @SpringBootTest
 @Slf4j
-public class TestPrototype {
+public class TwoPrototype {
     @Test
     void testPrototype() {
         // 创建原始促销活动

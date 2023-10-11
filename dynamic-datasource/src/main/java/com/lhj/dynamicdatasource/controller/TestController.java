@@ -3,6 +3,7 @@ package com.lhj.dynamicdatasource.controller;
 import com.lhj.dynamicdatasource.entity.Test;
 import com.lhj.dynamicdatasource.service.TestService;
 import jakarta.annotation.Resource;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -35,5 +36,6 @@ public class TestController {
         ZoneId zoneId = ZoneId.of("America/New_York");
         ZonedDateTime zonedDateTime = startTime.toInstant(ZoneOffset.of("+08:00")).atZone(zoneId);
         System.out.println(zonedDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        SqlSessionFactoryBuilder sqlSessionFactoryBuilder = new SqlSessionFactoryBuilder();
     }
 }

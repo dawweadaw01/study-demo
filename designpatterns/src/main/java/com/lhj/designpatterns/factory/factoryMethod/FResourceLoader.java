@@ -20,7 +20,7 @@ import java.util.Properties;
 @Component
 public class FResourceLoader {
 
-    private static Map<String, IResourceLoader> resourceLoaderMap = new HashMap<>();
+    private static final Map<String, IResourceLoader> resourceLoaderMap = new HashMap<>();
 
     //版本2
 //    static {

@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @RunWith(org.springframework.test.context.junit4.SpringRunner.class)
-public class Test {
+public class Two {
 
     @Autowired
     private DatabaseDataQuery databaseDataQuery;

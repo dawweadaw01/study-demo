@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dog" class="com.lhj.spring.pojo.Dog">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="age" value="10"/>
+        <property name="name" value="小黑"/>
+    </bean>
+
+    <bean id="user" class="com.lhj.spring.pojo.User">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="name" value="小红"/>
+    </bean>
+
+    <bean id="tel" class="com.lhj.spring.pojo.DogTel" parent="dog">
+        <property name="telname" value="小黑的电话"/>
+    </bean>
+    <!-- more bean definitions go here -->
+
+</beans>

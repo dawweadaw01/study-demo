@@ -3,23 +3,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.banyan</groupId>
-        <artifactId>study-demo</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
 
-    <groupId>com.lhj</groupId>
-    <artifactId>stream-lambda</artifactId>
-
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>two</scope>
-        </dependency>
-    </dependencies>
+    <groupId>org.example</groupId>
+    <artifactId>algorithm</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
