@@ -26,7 +26,7 @@ public class _899 {
 
     }
     public static int get(char[] a, char[] b){
-        int[][] dp = new int[a.length+1][b.length+1];
+        int[][] dp = new int[a.length+1][b.length+1];//
         for (int i = 0; i <= a.length; i++) {
             dp[i][0] = i;
         }
