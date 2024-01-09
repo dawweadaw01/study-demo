@@ -3,6 +3,10 @@ package letcode.october;
 import java.util.Arrays;
 import java.util.HashMap;
 
+/**
+ * 思路：
+ * 链接：h<a href="ttps://leetcode.cn/problems/extra-characters-in-a-string/solutions/2590667/zi-fu-chuan-zhong-de-e-wai-zi-fu-by-leet-f0lu/
+ ">...</a> */
 public class _2707 {
     public int minExtraChar(String s, String[] dictionary) {
         int n = s.length();
